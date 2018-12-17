@@ -2,17 +2,16 @@
   <div class="container-fluid p-0 m-0">
     <div class="row align-items-center banner h-100 no-gutters">
         <div class="col-12 about ">
-          <h1 class="text-white">Despre noi</h1>
+          <h1 class="text-white">Detalii achizitii</h1>
         </div>
     </div>
     <div class="row py-4 my-4">
        <div class="col-12 about">
-         <h1 class="py-4 my-4">Cine suntem? Ce facem? De cand facem?</h1>
-                    <p>
-                    Societatea SAM Robotics este reprezentantul oficial din 2008, in Romania pentru: Yaskawa Robotics Division (MOTOMAN) care este unul din liderii mondiali in conceperea, productia, implementarea si comercializarea de celule robotizate si roboti industriali cu diverse domenii de aplicabilitate in industrie, cercetare si invatamint. Supunem atentiei dumneavoastra aceasta gama de servicii si produse, prin statulul nostru de distribuitor autorizat in Romania. Pe langa aceasta colectivul nostru va ofera si o intreaga gama de echipamente, unelte si accesorii necesare sectorului de confectii si constructii metalice.
-
-
-                    </p>
+           <h1 class="py-4"> Arhiva achiztii</h1>
+         <li v-for="item in items">
+             <a href="item">{{ item }}</a>
+         </li>
+         <p>{{ item }}</p>
       </div>
     </div>
     <Footer />
@@ -28,9 +27,28 @@ export default {
   components:{
       Footer
   },
+  data(){
+      return{
+          items:[],
+          item:null,
+      }
+  },
   props: {
   },
   mounted(){
+    if(this.items.length == 0){
+      this.item = 'Nici un fisier disponibil.';
+    }
+  },
+  methods:{
+      getFiles(){
+          fetch('./render.php')
+          .then((response) => response.json())
+          .then((items) => {
+              console.log(items);
+          })
+          .catch((error) => { return console.log(error)})
+      }
   }
 }   
 </script>

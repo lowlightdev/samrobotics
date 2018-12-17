@@ -23,6 +23,8 @@ export default {
   margin:0;
 }
 html,body{
+  font-family: 'Roboto', sans-serif;
+
   padding:0;
   margin:0;
   width:100%;

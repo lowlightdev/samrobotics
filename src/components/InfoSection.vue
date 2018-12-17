@@ -2,16 +2,16 @@
     <div class="container-fluid p-0 m-0">
         <div class="col-12 my-4 py-4 left" :class="{ 'color': $props.position =='left' }" v-if="$props.position == 'left'">
           
-            <section class="row align-items-center ">
+            <section class="row align-items-center py-4 my-4">
               
                 <div class="col-sm-12 col-lg-6 col-xl-6">
                   <img src="@/assets/left.png" class="img-fluid"/>
                 </div>
                 
                 <div class="col-sm-12 col-lg-6 col-xl-6">
-                    <h1>Partener oficial <a href="https://www.yaskawa.eu.co">YASKAWA</a></h1>
+                    <h1 class="py-1">Partener oficial <a href="https://www.yaskawa.eu.co">YASKAWA</a></h1>
                     <p>
-                        <a href="http://sam-robotics.ro">SAM Robotics</a> Romania este o companie acreditata <a href="https://www.yaskawa.eu.co">YASKAWA</a> si parteneri oficiali ai acesteia in Romania. Intreaga noastra echipa fiind scolita si antrenata de una dintre cele mai bune companii din lume in domeniu ne ofera siguranta si increderea de care avem nevoie pentru a va oferii serviciile pe care vi le doriti de la o firma de renume.
+                        <a href="http://sam-robotics.ro">SAM Robotics</a> Romania este o companie acreditata <a href="https://www.yaskawa.eu.com">YASKAWA</a> si parteneri oficiali ai acesteia in Romania. Suntem service patrener autorizat, partener de vanzari, partener de sistem si partener de performanta toate a putea oferii cele mai inalte servicii si inova impreuna.
                     </p>
                     
                     <div class="text-right"><a href="#" class="btn btn-outline-primary">Viziteaza YASKAWA Motoman</a></div>
@@ -24,9 +24,9 @@
              <section  class="row align-items-center">
                             
                 <div class="col-sm-12 col-lg-6 col-xl-6">
-                    <h1>Subtitlu <a href="https://www.yaskawa.eu.co">Ceva</a></h1>
+                    <h1 class=py-1>Cate ceva despre noi</h1>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique augue ac varius dignissim. Phasellus vitae facilisis orci, mattis dapibus odio. Phasellus at lectus non elit volutpat feugiat et ac velit. Vestibulum nec urna placerat, laoreet ante nec, tristique nunc. Cras rutrum eros in lorem viverra condimentum. Duis ac imperdiet justo, nec hendrerit velit. In hac habitasse platea dictumst. Nunc metus mauris, consequat non metus eu, luctus accumsan tellus. Sed lacinia felis at ligula egestas mollis. Etiam neque nulla, commodo nec est ut, euismod dictum dolor. Aliquam sollicitudin sodales magna sed tincidunt. Ut blandit et ex ut fringilla.
+                    Societatea SAM Robotics este reprezentantul oficial din 2008, in Romania pentru: Yaskawa Robotics Division (MOTOMAN) care este unul din liderii mondiali in conceperea, productia, implementarea si comercializarea de celule robotizate si roboti industriali cu diverse domenii de aplicabilitate in industrie, cercetare si invatamint. Supunem atentiei dumneavoastra aceasta gama de servicii si produse, prin statulul nostru de distribuitor autorizat in Romania. Pe langa aceasta colectivul nostru va ofera si o intreaga gama de echipamente, unelte si accesorii necesare sectorului de confectii si constructii metalice.
 
 
                     </p>
@@ -54,7 +54,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss" scoped>
     .color{
-        background-color:rgba(#ccc,0.2);    
+        background-color:rgba(#ccc,0.1);    
     }
     .img-fluid{
         max-height:250px;
