@@ -72,7 +72,6 @@ export default {
 .absolute{
   position:absolute;
   z-index:9999;
-  max-width:1140px;
 }
 .row{
   @media screen and (min-width:960px){
