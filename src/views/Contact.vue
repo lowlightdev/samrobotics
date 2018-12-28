@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid p-0 m-0 ">
-    <div class="row align-items-center banner h-100 no-gutters">
-        <div class="col-12 ">
+  <div class="container-fluid p-0">
+    <div class="row align-items-center banner h-100 p-3">
+        <div class="col-12 contact">
           <h1 class="text-white">Contact</h1>
         </div>
     </div>
-    <div class="row no-gutters contact py-4 my-4">
+    <div class="row no-gutters contact p-3 my-4">
        <div class="col-sm-12 col-lg-6 col-xl-6">
          <h1 class="py-4 my-4">Date de contact</h1>
           <p><i class="fas fa-map-marker-alt mr-2"></i> Doctor Pavel Vasici Ungureanu 12A, 300489, Timisoara</p>

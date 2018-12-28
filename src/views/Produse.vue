@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid p-0 m-0">
-    <div class="row align-items-center banner h-100 no-gutters">
+  <div class="container-fluid p-0">
+    <div class="row align-items-center banner h-100 p-3">
         <div class="col-12 about ">
           <h1 class="text-white">Gama de produse acoperite</h1>
         </div>
     </div>
-    <div class="row py-4 my-4">
+    <div class="row p-3 my-4">
        <div class="col-12 about">
        <div class="row">
           <div class="col-4">

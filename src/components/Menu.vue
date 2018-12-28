@@ -2,7 +2,7 @@
   <div class="row no-gutters">
     <div class="col-12">
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand font-weight-bold" ><span style="color:#0094de">S</span><span style="color:#d1251f">AM</span>-ROBOTICS</a>
+        <a class="navbar-brand text-white font-weight-bold" ><span style="color:#0094de">S</span><span style="color:#d1251f">AM</span>-ROBOTICS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
