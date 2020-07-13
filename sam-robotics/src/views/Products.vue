@@ -1,12 +1,11 @@
 <template>
-  <section class="products row align-items-center vh-100 text-center no-gutters">
+  <section class="products row align-items-center vh-100 text-left no-gutters">
     <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--red  text-white vh-100 d-flex align-items-center">
       <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
       <h1 class="display-3 pt-4 m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
     </div>
     <div class="col-sm-12 col-md-7 animate__slideInRight animate__animated p-4 overflow">
-      <h1 class="h1 animate__fadeIn animate__animated pb-4"> Servicii si produse oferite</h1>
-        <div class="card-deck">
+        <div class="card-deck mt-4 text-center">
             <div class="card pt-4">
                 <font-awesome-icon icon="tools" class="text-center m-auto fa-2x mt-4" />
                 <div class="card-body">
@@ -14,14 +13,14 @@
                 <p class="card-text">Echipa noastra ofera mentenanta, reparatii, ajustari robotiilor la cea mai inalta calitate si cele mai inalte standarde oferite de o echipa pregatita pentru orice situatie.</p>
                 </div>
             </div>
-            <div class="card pt-4">
+            <div class="card p-4">
                 <font-awesome-icon icon="hands-helping" class="text-center m-auto fa-2x mt-4" />
                 <div class="card-body">
                 <h5 class="card-title">Consultanta</h5>
                 <p class="card-text">Oferim consultanta pentru robotii industriali din gama de produse acoperit cat si in alte domenii precum cnc-uri, sudura, consumabile din domeniu etc.</p>
                 </div>
             </div>
-            <div class="card pt-4">
+            <div class="card p-4">
                 <font-awesome-icon icon="comments-dollar" class="text-center m-auto fa-2x mt-4" />
                 <div class="card-body">
                 <h5 class="card-title">Achizitonare echipamente</h5>
@@ -30,11 +29,11 @@
             </div>
         </div>
 
-        <h2 class="h1 p-4">Produse</h2> 
+        <h2 class="h1 p-4 mt-4">Produse</h2> 
         <p class="text-left">Partenerii nostrii ofera o gama larga de produse din domeniul diferite domenii de activitate lefate re robotica, sdurua, echipamente industriale, etc. 
         <br> Pentru a vedea ofertele va rugam sa ne contactati folosding pagina de <router-link to="contact">contact</router-link></p>
 
-        <h2 class="h1 p-4">Parteneri</h2>
+        <h2 class="h1 p-4 mt-4 ">Parteneri</h2>
 
        
         <div  class="row"><div  class="col-4"><div  id="list-tab" role="tablist" class="list-group"><a  id="list-yaskawa-list" data-toggle="list" href="#list-yaskawa" role="tab" aria-controls="yaskawa" class="list-group-item list-group-item-action" aria-selected="false">Yaskawa</a><a  id="list-attc-list" data-toggle="list" href="#list-attc" role="tab" aria-controls="attc" class="list-group-item list-group-item-action active show" aria-selected="true">ATTC - American Torch Tip</a><a  id="list-sincosald-list" data-toggle="list" href="#list-sincosald" role="tab" aria-controls="sincosald" class="list-group-item list-group-item-action">Sincosald</a><a  id="list-zakmet-list" data-toggle="list" href="#list-zakmet" role="tab" aria-controls="zakmet" class="list-group-item list-group-item-action">Zakmet</a><a  id="list-sprut-list" data-toggle="list" href="#list-sprut" role="tab" aria-controls="sprut" class="list-group-item list-group-item-action">Sprutcam</a><a  id="list-hyper-list" data-toggle="list" href="#list-hyper" role="tab" aria-controls="hyper" class="list-group-item list-group-item-action">Hyperterm</a></div></div><div  class="col-8"><div  id="nav-tabContent" class="tab-content"><div  id="list-yaskawa" role="tabpanel" aria-labelledby="list-yaskawa-list" class="tab-pane fade">

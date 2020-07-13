@@ -1,5 +1,5 @@
 <template>
-  <section class="about row align-items-center vh-100 text-center no-gutters">
+  <section class="about row align-items-center vh-100 text-left no-gutters">
     <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--red  text-white vh-100 d-flex align-items-center">
       <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
       <h1 class="m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
