@@ -1,10 +1,10 @@
 <template>
   <section class="products row align-items-center vh-100 text-center no-gutters">
-    <div class="col-sm-12 col-md-6 animate__slideInLeft animate__animated background--red  text-white vh-100 d-flex align-items-center">
+    <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--red  text-white vh-100 d-flex align-items-center">
       <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
       <h1 class="display-3 pt-4 m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
     </div>
-    <div class="col-sm-12 col-md-6 animate__slideInRight animate__animated p-4 overflow">
+    <div class="col-sm-12 col-md-7 animate__slideInRight animate__animated p-4 overflow">
       <h1 class="h1 animate__fadeIn animate__animated pb-4"> Servicii si produse oferite</h1>
         <div class="card-deck">
             <div class="card pt-4">
