@@ -6,6 +6,7 @@ SAM Robotics is one of the best industrial robots maintenance,consultation and i
 
 SAM Robotics is a certified [Yaskawa](www.yaskawa.com) partner.
 
+
 ## Project setup
 ```
 npm install
@@ -28,3 +29,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+@lowlightdev
