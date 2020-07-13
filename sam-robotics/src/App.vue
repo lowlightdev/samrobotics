@@ -28,11 +28,9 @@ html,body, #app{
   align-items: center;
   text-align: center;
   transition: all linear 0.2s;
-  border: 0px solid  rgb(112, 112, 112) !important;
   &:hover{
     transition: all linear 0.2s;
-    box-shadow:  inset 0 0 5px rgb(112, 112, 112) !important;
-    border: 1px solid  rgb(112, 112, 112) !important;
+    box-shadow: 0px 5px 15px rgb(34, 34, 34) !important;
   }
 }
 </style>
