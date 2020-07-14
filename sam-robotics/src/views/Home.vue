@@ -1260,7 +1260,7 @@
               </ul>
             </div>
           </nav>
-          <h2 class="align-self-center justify-self-center p-4 text-center m-auto text-uppercase">Specialistul tau in echipamente si robotice industriali</h2>
+          <h2 class="align-self-center justify-self-center p-4 text-center m-auto text-uppercase">Specialistul tau in echipamente si robotice industriale</h2>
           <PageFooter class="footer"/>
         </div>
       </div>
