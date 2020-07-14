@@ -9,11 +9,6 @@
 </template>
 
 <style lang="scss" scoped>
-footer{
-    @media screen and (max-width: 960px){
-        display:flex;
-    }
-}
 small{
     font-size:85%;
 }
