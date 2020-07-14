@@ -35,7 +35,8 @@ export default {
     PageFooter
   },
   beforeCreate(){
-    fetch("https://www.googleapis.com/blogger/v3/blogs/3135149309622251946/posts?key=AIzaSyDQ6WLgoa78hHrFydPneUp0e729Q7TNFXo").then(response => response.json()).then(data => {
+    const key = process.env.KEY || "AIzaSyDQ6WLgoa78hHrFydPneUp0e729Q7TNFXo";
+    fetch(`https://www.googleapis.com/blogger/v3/blogs/3135149309622251946/posts?key=${key}`).then(response => response.json()).then(data => {
       data.items.forEach((item)=>{
         const id = item.id;
         const title  = item.title;
