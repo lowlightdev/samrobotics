@@ -6,7 +6,7 @@
 
 <style lang="scss">
 html,body, #app{
-    font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 .background{
   &--red{
@@ -16,6 +16,14 @@ html,body, #app{
     background:#0096c7;
   }
 }
+
+.overflow{
+  @media screen and (min-width: 960px){
+      overflow:auto;
+      max-height:100%;
+  }
+}
+
 .block{
   @media screen and (min-width: 960px){
     min-height:200px;

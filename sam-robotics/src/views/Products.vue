@@ -29,11 +29,11 @@
             </div>
         </div>
 
-        <h2 class="h1 p-4 mt-4">Produse</h2> 
+        <h2 class="h1 pt-4 pb-4 mt-4">Produse</h2> 
         <p class="text-left">Partenerii nostrii ofera o gama larga de produse din domeniul diferite domenii de activitate lefate re robotica, sdurua, echipamente industriale, etc. 
-        <br> Pentru a vedea ofertele va rugam sa ne contactati folosding pagina de <router-link to="contact">contact</router-link></p>
+        <br> Pentru a vedea ofertele va rugam sa ne contactati folosind pagina de <router-link to="contact">contact</router-link></p>
 
-        <h2 class="h1 p-4 mt-4 ">Parteneri</h2>
+        <h2 class="h1 pt-4 pb-4 mt-4 ">Parteneri</h2>
 
        
         <div  class="row"><div  class="col-4"><div  id="list-tab" role="tablist" class="list-group"><a  id="list-yaskawa-list" data-toggle="list" href="#list-yaskawa" role="tab" aria-controls="yaskawa" class="list-group-item list-group-item-action" aria-selected="false">Yaskawa</a><a  id="list-attc-list" data-toggle="list" href="#list-attc" role="tab" aria-controls="attc" class="list-group-item list-group-item-action active show" aria-selected="true">ATTC - American Torch Tip</a><a  id="list-sincosald-list" data-toggle="list" href="#list-sincosald" role="tab" aria-controls="sincosald" class="list-group-item list-group-item-action">Sincosald</a><a  id="list-zakmet-list" data-toggle="list" href="#list-zakmet" role="tab" aria-controls="zakmet" class="list-group-item list-group-item-action">Zakmet</a><a  id="list-sprut-list" data-toggle="list" href="#list-sprut" role="tab" aria-controls="sprut" class="list-group-item list-group-item-action">Sprutcam</a><a  id="list-hyper-list" data-toggle="list" href="#list-hyper" role="tab" aria-controls="hyper" class="list-group-item list-group-item-action">Hyperterm</a></div></div><div  class="col-8"><div  id="nav-tabContent" class="tab-content"><div  id="list-yaskawa" role="tabpanel" aria-labelledby="list-yaskawa-list" class="tab-pane fade">
@@ -94,12 +94,7 @@ export default {
     max-height:250px !important; 
   }
 }
-.overflow{
-    @media screen and (min-width: 960px){
-        overflow:auto;
-        max-height:100%;
-    }
-}
+
 .list-group-item.active{
     background-color: #0096c7 !important;
 }

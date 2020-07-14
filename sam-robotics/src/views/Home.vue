@@ -56,8 +56,9 @@ export default {
 <style lang="scss" scoped>
 main{
   @media screen and (max-width: 960px){
-    margin-top:100px;
+    margin-top:150px;
   }
+
 }
 .logo{
   background-image: url('~@/assets/sam_logo.jpg');
