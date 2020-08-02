@@ -120,7 +120,6 @@ export default {
         message: this.message
       })
       }).then((response)=> response.json()).then((data)=>{
-        console.log(data);
         this.sending=false;
         this.success = true;
         const thisObj = this;
