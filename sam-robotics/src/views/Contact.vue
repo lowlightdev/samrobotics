@@ -1,6 +1,6 @@
 <template>
   <section class="contact row align-items-center vh-100 text-left no-gutters">
-    <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--red  text-white vh-100 d-flex align-items-center">
+    <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--blue  text-white vh-100 d-flex align-items-center">
       <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
       <h1 class="m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
     </div>
@@ -12,39 +12,45 @@
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="validationServer01">Numele</label>
-            <input type="text" class="form-control" id="name" v-model="name" required>
+            <input type="text" class="form-control" id="name" v-model="name" required :disabled="sending">
           </div>
           <div class="col-md-6 mb-3">
             <label for="validationServer02">Prenumele</label>
-            <input type="text" class="form-control" id="surname" v-model="surname" required>
+            <input type="text" class="form-control" id="surname" v-model="surname" required :disabled="sending">
           </div>
         </div>
         <div class="form-row">
-          <div class="col-md-6 mb-3">
+          <div class="col-md-4 mb-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" v-model="email" required>
+            <input type="email" class="form-control" id="email" v-model="email" required :disabled="sending">
           </div>
-          <div class="col-md-6 mb-3">
+          <div class="col-md-4 mb-3">
+            <label for="phone">Telefon</label>
+            <input type="number" class="form-control" id="phone" v-model="phone" required :disabled="sending">
+          </div>
+          <div class="col-md-4 mb-3">
             <label for="company">Companie</label>
-            <input type="text" class="form-control" id="company" v-model="company" required>
+            <input type="text" class="form-control" id="company" v-model="company" required :disabled="sending">
           </div>
         </div>
         <div class="mb-3">
           <label for="message">Mesaj</label>
-          <textarea class="form-control" id="message" placeholder="Introduceti mesajul" required v-model="message"></textarea>
+          <textarea class="form-control" id="message" placeholder="Introduceti mesajul" required v-model="message" :disabled="sending"></textarea>
         </div>
+        <div class="invalid-feedback font-weight-bold pt-2 pb-2"></div>
         <div class="form-group">
           <div class="form-check">
-            <input class="form-check-input " type="checkbox" :checked="gdpr" id="invalidCheck3" required>
+            <input class="form-check-input " type="checkbox" :checked="gdpr" id="invalidCheck3" required :disabled="sending">
             <label class="form-check-label text-dark" for="invalidCheck3">
-              Sunteti de acord cu <router-link to="#">termenii si condiitile GDPR</router-link>
+                Sunteti de acord cu <router-link to="#">termenii si condiitile GDPR</router-link>
             </label>
             <div class="text-danger">
               <small>*Trebuie sa fiti de acord pentru a trimite mesajul.</small>
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Send</button>
+        <h4 v-show="success" class="text-success"> Mesajul a fost trimis cu success.</h4>
+        <button class="btn btn-primary" type="submit" :disabled="sending"> {{ !sending ? "Send" : "Sending..." }}</button>
       </form>
       <hr>
       <div class="pt-4 pb-4">
@@ -55,16 +61,15 @@
           <font-awesome-icon icon="map-marker-alt" /> {{ address }}
         </li>
         <li class="pb-1 pt-1">
-          <font-awesome-icon icon="phone"/>  {{ phone }}
+          <font-awesome-icon icon="phone"/>  {{ contact }}
         </li>
         <li class="pb-1 pt-1">
           <font-awesome-icon icon="at"/>  {{ mail }}
         </li>
         <li class="pb-1 pt-1">
-          <font-awesome-icon :icon="['fab','twitter-square']"/>  <a :href="twitter">{{ twitter }}</a>
+          <font-awesome-icon :icon="['fab','facebook-square']"/>  <a :href="facebook">{{ facebook }}</a>
         </li>
       </ul>
-
     </div>
     <PageFooter />
   </section>
@@ -78,15 +83,18 @@ export default {
   data(){
     return{
       address:"Doctor Pavel Vasici Ungureanu 12A, 300489, Timisoara",
-      phone:" +40 722 363 086",
+      contact:" +40 722 363 086",
       mail:"office@sam-robotics.ro",
-      twitter:"https://twitter.com/samrobotics",
+      facebook:"https://facebook.com/SamRoboticsRomania",
       name:"",
       surname:"",
       company:"",
       email:"",
       message:"",
-      gdpr:false
+      phone:"",
+      gdpr:false,
+      success:false,
+      sending:false
     }
   },
   components: {
@@ -97,7 +105,8 @@ export default {
       this.$router.push('/')
     },
     postMessage(){
-      fetch('http://127.0.0.1:8080/trello',{
+      this.sending=true;
+      fetch('http://127.0.0.1:7920/trello',{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -107,12 +116,27 @@ export default {
         surname: this.surname,
         company: this.company,
         email: this.email,
+        phone:this.phone,
         message: this.message
       })
       }).then((response)=> response.json()).then((data)=>{
         console.log(data);
+        this.sending=false;
+        this.success = true;
+        const thisObj = this;
+        setTimeout(function(){
+          thisObj.success = false;
+        },3000);
       }).catch((error)=>{
-        console.log(error)
+        console.log(error);
+        const errorMsg = document.querySelector('.invalid-feedback');
+        errorMsg.style.display="block";
+        errorMsg.innerText = "Error! Va rugam incercati din nou.";
+        
+        setTimeout(function(){
+          errorMsg.style.display="none"
+        },3000);
+        this.sending=false;
       })
     }
   },
