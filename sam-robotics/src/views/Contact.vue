@@ -106,7 +106,7 @@ export default {
     },
     postMessage(){
       this.sending=true;
-      fetch('http://127.0.0.1:7920/trello',{
+      fetch('http://claptrap.myddns.me:7920/trello',{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
