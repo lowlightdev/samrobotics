@@ -106,7 +106,7 @@ export default {
     },
     postMessage(){
       this.sending=true;
-      fetch('http://206.189.23.196:7920/trello',{
+      fetch('http://127.0.0.1:7920/trello',{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
