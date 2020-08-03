@@ -26,7 +26,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="phone">Telefon</label>
-            <input type="number" class="form-control" id="phone" v-model="phone" required :disabled="sending">
+            <input type="tel" class="form-control" id="phone" v-model="phone" required :disabled="sending">
           </div>
           <div class="col-md-4 mb-3">
             <label for="company">Companie</label>
@@ -54,7 +54,7 @@
       </form>
       <hr>
       <div class="pt-4 pb-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.70971906125!2d21.2098532159288!3d45.736915979105156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d0aebaaee37%3A0xf65c7e24b66e4115!2sStr.%20Dr.%20Pavel%20Vasici%20Ungureanu%2012a%2C%20Timi%C8%99oara%20300489%2C%20Romania!5e0!3m2!1sen!2suk!4v1594726703629!5m2!1sen!2suk" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <ul class="ml-2 pl-2">
         <li class="pb-1 pt-1">
@@ -86,6 +86,7 @@ export default {
       contact:" +40 722 363 086",
       mail:"office@sam-robotics.ro",
       facebook:"https://facebook.com/SamRoboticsRomania",
+      maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.70971906125!2d21.2098532159288!3d45.736915979105156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d0aebaaee37%3A0xf65c7e24b66e4115!2sStr.%20Dr.%20Pavel%20Vasici%20Ungureanu%2012a%2C%20Timi%C8%99oara%20300489%2C%20Romania!5e0!3m2!1sen!2suk!4v1594726703629!5m2!1sen!2suk",
       name:"",
       surname:"",
       company:"",

@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid pl-0 vh-100">
+  <main class="container-fluid vh-100">
     <section class="row h-100 no-gutters">
       <aside class="col-xs-12 col-md-5 left">
        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -27,7 +27,7 @@
       <div class="col-xs-12 col-md-7 right">
         <div class="row h-100 no-gutter flex-column">
           <nav class="navbar navbar-expand-lg navbar-light align-items-start">
-            <a class="navbar-brand pl-3" href="http://www.sam-robotics.ro"><img src="~@/assets/sam_logo.jpg" height="96  "/></a>
+            <a class="navbar-brand pl-3"  href="http://www.sam-robotics.ro"><img src="~@/assets/sam_logo.jpg" height="96" style="height:96px !important"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,7 +52,7 @@
             </div>
           </nav>
           <h2 class="align-self-center justify-self-center p-4 text-center m-auto text-uppercase">
-            Specialistil tau in consultanta, mentenanta si reparatii a robotilor industriali si a echipamentelor de automatizare industriale
+            Prima alegere in consultanta, mentenanta si reparatii a robotilor industriali si a echipamentelor de automatizare industriale
           </h2>
           <PageFooter class="footer"/>
         </div>
@@ -74,7 +74,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.container-fluid{
+  @media screen and (min-width: 960px){
+    padding-left:0;
+  }
+}
 .vh-100 img{
   @media screen and (max-width: 960px){
     height:200px !important;
@@ -85,15 +89,13 @@ export default {
   background: rgb(165,1,4);
   background: linear-gradient(180deg, rgba(165,1,4,1) 35%, rgba(0,150,199,1) 100%); 
   position:relative;
-  background-size:100% 100%;
-  background-repeat: no-repeat;
   @media screen and (max-width: 960px){
     height:200px !important;
   }
 }
 
 .right{
-  height:100%;
+  min-height:100%;
 }
 .footer{
   text-align:right !important;
