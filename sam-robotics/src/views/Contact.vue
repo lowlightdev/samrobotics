@@ -106,7 +106,7 @@ export default {
     },
     postMessage(){
       this.sending=true;
-      fetch('http://127.0.0.1:7920/trello',{
+      fetch('http://206.189.23.196:7920/trello',{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ export default {
         phone:this.phone,
         message: this.message
       })
-      }).then((response)=> response.json()).then((data)=>{
+      }).then((response)=> response.json()).then(()=>{
         this.sending=false;
         this.success = true;
         const thisObj = this;
