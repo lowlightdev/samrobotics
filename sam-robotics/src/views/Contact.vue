@@ -1,14 +1,15 @@
 <template>
-  <section class="contact row align-items-center vh-100 text-left no-gutters">
-    <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--blue  text-white vh-100 d-flex align-items-center">
-      <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
-      <h1 class="m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
+  <section class="contact container-fluid p-0">
+    <div class="row align-items-center  animate__fadeIn animate__animated">
+    <header class="col-12 animate__slideInLeft animate__animated blue--bg d-flex align-self-center justify-self-center">
+        <h1 class="m-auto text-center align-self-center justify-self-center">{{ $route.name }}</h1>
+      </header>
     </div>
-    <div class="col-sm-12 col-md-7 animate__slideInRight animate__animated p-4 overflow">
+    <div class="row align-items-center container text-left m-auto no-gutters vh-50">
 
       <h3 class="pt-4 pb-4 mb-4 mt-4">Pentru informatii si ajutor va rugam completati formularul de mai jos</h3>
 
-      <form @submit.prevent="postMessage">
+      <form @submit.prevent="postMessage" class="col-12">
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="validationServer01">Numele</label>
@@ -53,10 +54,10 @@
         <button class="btn btn-primary" type="submit" :disabled="sending"> {{ !sending ? "Send" : "Sending..." }}</button>
       </form>
       <hr>
-      <div class="pt-4 pb-4">
+      <div class="col-12 pt-4 pb-4">
         <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
       </div>
-      <ul class="ml-2 pl-2">
+      <ul class="p-4 ">
         <li class="pb-1 pt-1">
           <font-awesome-icon icon="map-marker-alt" /> {{ address }}
         </li>
@@ -71,13 +72,10 @@
         </li>
       </ul>
     </div>
-    <PageFooter />
   </section>
 </template>
 
 <script>
-import PageFooter from "@/components/PageFooter";
-
 export default {
   name:'contact',
   data(){
@@ -99,7 +97,6 @@ export default {
     }
   },
   components: {
-    PageFooter
   },
   methods:{
     goHome(){
@@ -144,12 +141,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.fa-arrow-left{
-  cursor: pointer !important;
-}
-.vh-100{
-  @media screen and (max-width: 960px){
-    max-height:250px !important; 
-  }
+header{
+  min-height:30vh;
 }
 </style>

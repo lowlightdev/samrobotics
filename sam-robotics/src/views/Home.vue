@@ -48,7 +48,7 @@
               <p class="card-text" v-html="posts[0].content">
               </p>
             </div>
-            <div class="card-footer text-center text-muted">
+            <div class="card-footer text-left text-muted">
               <p class="card-text"><small class="text-muted">Posted {{ posts[0].date }}</small></p>
             </div>
           </div>
@@ -88,9 +88,6 @@ export default {
     })
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    }
   }
 }
 

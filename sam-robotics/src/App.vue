@@ -9,13 +9,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <router-link class="nav-link" to="#">Home <span class="sr-only">(current)</span></router-link>
+            <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="#">Despre noi</router-link>
+            <router-link class="nav-link" to="/about">Despre noi</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="#">Servicii</router-link>
+            <router-link class="nav-link" to="/services">Servicii</router-link>
           </li>
           <li class="nav-item dropdown">
             <router-link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,12 +29,12 @@
             </div>
           </li>
          <li class="nav-item">
-            <router-link class="nav-link" to="#">Contact</router-link>
+            <router-link class="nav-link" to="/contact">Contact</router-link>
           </li>
         </ul>
       </div>
     </nav>
-    <router-view class=""/>
+    <router-view />
     <footer class="p-4">
       <div class="container">
         <div class="row">
@@ -145,6 +145,9 @@ export default {
 html,body, #app{
   font-family: 'Roboto', sans-serif !important;
 }
+.vh-50{
+  min-height: 50vh;
+}
 .container{
   @media screen and (max-width:960px) {
     padding: 0;
@@ -165,9 +168,15 @@ nav{
 }
 .blue{
   color: #0096c7;
+  &--bg{
+    background: #0096c7;
+  }
 }
 .red{
   color: #a50104;
+  &--bg{
+    background: #a50104;
+  }
 }
 footer{
   background-color: rgb(24, 27, 29);
