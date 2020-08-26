@@ -9,18 +9,15 @@
 
       <article v-for="post in posts" class="row p-2" :key="post.id">
         <div class="col-md-9 col-sm-12">
-          <h2 class="">{{ post.title }} </h2>
+          <h2>{{ post.title }} </h2>
         </div>
-        <div class="col-md-3 col-sm-12">
-
-        </div>
-        <div class="col-12 pt-2 pb-2" v-html="post.content"></div>
         <div class="col-12">
           <small class="text-muted">
             <font-awesome-icon icon="clock"  /> 
-            {{ post.date }}
+            Posted on {{ post.date }}
           </small>
         </div>
+        <div class="col-12 pt-2 pb-2" v-html="post.content"></div>
         <div class="col-12">
           <hr>
         </div>
