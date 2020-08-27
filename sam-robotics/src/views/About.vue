@@ -32,17 +32,11 @@ export default {
   components: {
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.fa-arrow-left{
-  cursor: pointer !important;
-}
 header{
   min-height:30vh;
 }

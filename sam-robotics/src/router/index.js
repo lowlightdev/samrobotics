@@ -20,11 +20,27 @@ Vue.use(VueRouter)
   },
   {
     path: '/services',
-    name: 'Servicii si produse',
+    name: 'Servicii',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Products.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Services.vue')
+  },
+  {
+    path: '/products/partners',
+    name: 'Parteneri',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Partners.vue')
+  },
+  {
+    path: '/products/yaskawa',
+    name: 'Produse Yaskawa',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProductsYaskawa.vue')
   },
   {
     path: '/contact',

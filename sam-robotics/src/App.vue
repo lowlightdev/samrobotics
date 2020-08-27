@@ -1,34 +1,36 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark container fixed-top p-2">
-      <router-link class="navbar-brand logo" to="#"><span class="blue">S</span><span class="red">AM</span> Robotic<span class="blue">s</span></router-link>
+      <a class="navbar-brand logo" href="http://www.sam-robotics.ro">SAM Robotics</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item" :class="$route.name =='Home' ? 'active':''">
             <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" :class="$route.name =='Despre Noi' ? 'active':''">
             <router-link class="nav-link" to="/about">Despre noi</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" :class="$route.name =='Noutati si Info' ? 'active':''">
+            <router-link class="nav-link" to="/news">Noutati</router-link>
+          </li>
+          <li class="nav-item" :class="$route.name =='Servicii' ? 'active':''">
             <router-link class="nav-link" to="/services">Servicii</router-link>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" :class="$route.path.includes('products') ? 'active':''">
             <router-link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Produse
             </router-link>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link class="dropdown-item" to="#">Action</router-link>
-              <router-link class="dropdown-item" to="#">Another action</router-link>
+              <router-link class="dropdown-item" to="/products/yaskawa">Yaskawa Industrial Robots</router-link>
               <div class="dropdown-divider"></div>
-              <router-link class="dropdown-item" to="#">Something else here</router-link>
+              <router-link class="dropdown-item" to="/products/partners">Parteneri si afiliati</router-link>
             </div>
           </li>
-         <li class="nav-item">
+         <li class="nav-item" :class="$route.name =='Contact' ? 'active':''">
             <router-link class="nav-link" to="/contact">Contact</router-link>
           </li>
         </ul>
@@ -101,9 +103,6 @@ export default {
   components: {
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    },
     postMessage(){
       this.sending=true;
       fetch('http://claptrap.myddns.me:7920/trello',{

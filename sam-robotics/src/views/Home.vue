@@ -70,7 +70,7 @@ export default {
   components: {
   },
   beforeCreate(){
-    const key = process.env.KEY || "AIzaSyDQ6WLgoa78hHrFydPneUp0e729Q7TNFXo";
+    const key = this.$store.state.blogger;
     fetch(`https://www.googleapis.com/blogger/v3/blogs/3135149309622251946/posts?key=${key}`).then(response => response.json()).then(data => {
       data.items.forEach((item,i)=>{
         if(i<1){

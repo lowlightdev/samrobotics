@@ -1,38 +1,12 @@
 <template>
-  <section class="products row align-items-center vh-100 text-left no-gutters">
-    <div class="col-sm-12 col-md-5 animate__slideInLeft animate__animated background--blue  text-white vh-100 d-flex align-items-center">
-      <font-awesome-icon icon="arrow-left" class="align-self-start justify-self-start m-4 fa-2x position-absolute" v-on:click="goHome"/>
-      <h1 class="display-3 pt-4 m-auto animate__fadeIn animate__animated">{{ $route.name }}</h1>
+ <section class="about container-fluid p-0">
+    <div class="row align-items-center  animate__fadeIn animate__animated">
+    <header class="col-12 animate__slideInLeft animate__animated blue--bg d-flex align-self-center justify-self-center">
+        <h1 class="m-auto text-center align-self-center justify-self-center">{{ $route.name }}</h1>
+      </header>
     </div>
-    <div class="col-sm-12 col-md-7 animate__slideInRight animate__animated p-4 overflow">
-        <div class="card-deck mt-4 text-center">
-            <div class="card p-2">
-                <font-awesome-icon icon="tools" class="text-center m-auto fa-2x mt-4" />
-                <div class="card-body">
-                <h5 class="card-title">Mentenanta,reparatii si instalare</h5>
-                <p class="card-text">Echipa noastra ofera mentenanta, reparatii, ajustari robotiilor la cea mai inalta calitate si cele mai inalte standarde oferite de o echipa pregatita pentru orice situatie.</p>
-                </div>
-            </div>
-            <div class="card p-2">
-                <font-awesome-icon icon="hands-helping" class="text-center m-auto fa-2x mt-4" />
-                <div class="card-body">
-                <h5 class="card-title">Consultanta</h5>
-                <p class="card-text">Oferim consultanta pentru robotii industriali din gama de produse acoperit cat si in alte domenii precum cnc-uri, sudura, consumabile din domeniu etc.</p>
-                </div>
-            </div>
-            <div class="card p-2">
-                <font-awesome-icon icon="comments-dollar" class="text-center m-auto fa-2x mt-4" />
-                <div class="card-body">
-                <h5 class="card-title">Achizitonare echipamente</h5>
-                <p class="card-text">Oferim echipamente clientiilor nostrii oferite de partenerii nostri si consultata in punerea lor in functiune.</p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="h1 pt-4 mt-4">Produse</h2> 
-        <hr />
-        <p class="text-left">Partenerii nostrii ofera o gama larga de produse din domeniul diferite domenii de activitate lefate re robotica, sdurua, echipamente industriale, etc. 
-        <br> Pentru a vedea ofertele va rugam sa ne contactati folosind pagina de <router-link to="contact">contact</router-link></p>
+    <div class="row align-items-center container text-left m-auto no-gutters vh-50">
+      <div class="col-12 animate__slideInRight animate__animated p-4">
 
         <h2 class="h1 mt-4 pt-4">Parteneri</h2>
         <hr />  
@@ -66,41 +40,28 @@ Today we are pleased to be able to offer you our solutions as well as our knowle
               </div><div  id="list-hyper" role="tabpanel" aria-labelledby="list-hyper-list" class="tab-pane fade">
               Fifty years ago, in a small two car garage, Hypertherm began our journey with simple, powerful ideas about business and an invention that shaped the future of industrial cutting. The same ideals that fueled our inception all those years ago are still what drive us today: A passion for challenging what's achievable with the products we create, the culture we foster, and the experience we deliver to our customers. As we look to the horizon and the next 50 years, we are proud that our people, partners and innovations will shape the future with solutions that make anything possible for industries around the world.
               </div></div>
-      </div>
+            </div>
+        </div>
       </div>
     </div>
-    <PageFooter />
   </section>
 </template>
 
 <script>
-import PageFooter from "@/components/PageFooter";
-
 export default {
   name:'products',
   components: {
-    PageFooter
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.fa-arrow-left{
-  cursor: pointer !important;
-  z-index:9999;
+header{
+  min-height:30vh;
 }
-.vh-100{
-  @media screen and (max-width: 960px){
-    max-height:250px !important; 
-  }
-}
-
-.list-group-item.active{
-    background-color: #0096c7 !important;
+.vh-50{
+  min-height: 50vh;
 }
 </style>

@@ -6,71 +6,73 @@
       </header>
     </div>
     <div class="row align-items-center container text-left m-auto no-gutters vh-50">
+      <div class="col-12 animate__slideInRight animate__animated p-4">
 
-      <h3 class="pt-4 pb-4 mb-4 mt-4">Pentru informatii si ajutor va rugam completati formularul de mai jos</h3>
+        <h3 class="pt-4 pb-4 mb-4 mt-4">Pentru informatii si ajutor va rugam completati formularul de mai jos</h3>
 
-      <form @submit.prevent="postMessage" class="col-12">
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationServer01">Numele</label>
-            <input type="text" class="form-control" id="name" v-model="name" required :disabled="sending">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="validationServer02">Prenumele</label>
-            <input type="text" class="form-control" id="surname" v-model="surname" required :disabled="sending">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" v-model="email" required :disabled="sending">
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="phone">Telefon</label>
-            <input type="tel" class="form-control" id="phone" v-model="phone" required :disabled="sending">
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="company">Companie</label>
-            <input type="text" class="form-control" id="company" v-model="company" required :disabled="sending">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="message">Mesaj</label>
-          <textarea class="form-control" id="message" placeholder="Introduceti mesajul" required v-model="message" :disabled="sending"></textarea>
-        </div>
-        <div class="invalid-feedback font-weight-bold pt-2 pb-2"></div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input " type="checkbox" :checked="gdpr" id="invalidCheck3" required :disabled="sending">
-            <label class="form-check-label text-dark" for="invalidCheck3">
-                Sunteti de acord cu <router-link to="#">termenii si condiitile GDPR</router-link>
-            </label>
-            <div class="text-danger">
-              <small>*Trebuie sa fiti de acord pentru a trimite mesajul.</small>
+        <form @submit.prevent="postMessage" class="col-12">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer01">Numele</label>
+              <input type="text" class="form-control" id="name" v-model="name" required :disabled="sending">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationServer02">Prenumele</label>
+              <input type="text" class="form-control" id="surname" v-model="surname" required :disabled="sending">
             </div>
           </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" v-model="email" required :disabled="sending">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="phone">Telefon</label>
+              <input type="tel" class="form-control" id="phone" v-model="phone" required :disabled="sending">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="company">Companie</label>
+              <input type="text" class="form-control" id="company" v-model="company" required :disabled="sending">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="message">Mesaj</label>
+            <textarea class="form-control" id="message" placeholder="Introduceti mesajul" required v-model="message" :disabled="sending"></textarea>
+          </div>
+          <div class="invalid-feedback font-weight-bold pt-2 pb-2"></div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input " type="checkbox" :checked="gdpr" id="invalidCheck3" required :disabled="sending">
+              <label class="form-check-label text-dark" for="invalidCheck3">
+                  Sunteti de acord cu <router-link to="#">termenii si condiitile GDPR</router-link>
+              </label>
+              <div class="text-danger">
+                <small>*Trebuie sa fiti de acord pentru a trimite mesajul.</small>
+              </div>
+            </div>
+          </div>
+          <h4 v-show="success" class="text-success"> Mesajul a fost trimis cu success.</h4>
+          <button class="btn btn-primary" type="submit" :disabled="sending"> {{ !sending ? "Send" : "Sending..." }}</button>
+        </form>
+        <hr>
+        <div class="col-12 pt-4 pb-4">
+          <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
         </div>
-        <h4 v-show="success" class="text-success"> Mesajul a fost trimis cu success.</h4>
-        <button class="btn btn-primary" type="submit" :disabled="sending"> {{ !sending ? "Send" : "Sending..." }}</button>
-      </form>
-      <hr>
-      <div class="col-12 pt-4 pb-4">
-        <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+        <ul class="p-4 ">
+          <li class="pb-1 pt-1">
+            <font-awesome-icon icon="map-marker-alt" /> {{ address }}
+          </li>
+          <li class="pb-1 pt-1">
+            <font-awesome-icon icon="phone"/>  {{ contact }}
+          </li>
+          <li class="pb-1 pt-1">
+            <font-awesome-icon icon="at"/>  {{ mail }}
+          </li>
+          <li class="pb-1 pt-1">
+            <font-awesome-icon :icon="['fab','facebook-square']"/>  <a :href="facebook">{{ facebook }}</a>
+          </li>
+        </ul>
       </div>
-      <ul class="p-4 ">
-        <li class="pb-1 pt-1">
-          <font-awesome-icon icon="map-marker-alt" /> {{ address }}
-        </li>
-        <li class="pb-1 pt-1">
-          <font-awesome-icon icon="phone"/>  {{ contact }}
-        </li>
-        <li class="pb-1 pt-1">
-          <font-awesome-icon icon="at"/>  {{ mail }}
-        </li>
-        <li class="pb-1 pt-1">
-          <font-awesome-icon :icon="['fab','facebook-square']"/>  <a :href="facebook">{{ facebook }}</a>
-        </li>
-      </ul>
     </div>
   </section>
 </template>
@@ -143,5 +145,8 @@ export default {
 <style lang="scss" scoped>
 header{
   min-height:30vh;
+}
+.vh-50{
+  min-height: 50vh;
 }
 </style>
