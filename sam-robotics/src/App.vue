@@ -1,42 +1,56 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark container fixed-top p-2">
-      <a class="navbar-brand logo" href="http://www.sam-robotics.ro">SAM Robotics</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="navigation container-fluid" :class="isMobile ? 'bg-dark':'fixed-top'">
+      <nav class="navbar navbar-expand-lg navbar-dark container" >
+        <a class="navbar-brand logo" href="http://www.sam-robotics.ro">
+          <img src="@/assets/sam_logo.png" width="128" >
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item" :class="$route.name =='Home' ? 'active':''">
-            <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
-          </li>
-          <li class="nav-item" :class="$route.name =='Despre Noi' ? 'active':''">
-            <router-link class="nav-link" to="/about">Despre noi</router-link>
-          </li>
-          <li class="nav-item" :class="$route.name =='Noutati si Info' ? 'active':''">
-            <router-link class="nav-link" to="/news">Noutati</router-link>
-          </li>
-          <li class="nav-item" :class="$route.name =='Servicii' ? 'active':''">
-            <router-link class="nav-link" to="/services">Servicii</router-link>
-          </li>
-          <li class="nav-item dropdown" :class="$route.path.includes('products') ? 'active':''">
-            <router-link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Produse
-            </router-link>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link class="dropdown-item" to="/products/yaskawa">Yaskawa Industrial Robots</router-link>
-              <div class="dropdown-divider"></div>
-              <router-link class="dropdown-item" to="/products/partners">Parteneri si afiliati</router-link>
-            </div>
-          </li>
-         <li class="nav-item" :class="$route.name =='Contact' ? 'active':''">
-            <router-link class="nav-link" to="/contact">Contact</router-link>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" :class="$route.name =='Home' ? 'active':''">
+              <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
+            </li>
+            <li class="nav-item" :class="$route.name =='Despre Noi' ? 'active':''">
+              <router-link class="nav-link" to="/about">Despre noi</router-link>
+            </li>
+            <li class="nav-item" :class="$route.name =='Noutati si Info' ? 'active':''">
+              <router-link class="nav-link" to="/news">Noutati</router-link>
+            </li>
+            <li class="nav-item" :class="$route.name =='Servicii' ? 'active':''">
+              <router-link class="nav-link" to="/services">Servicii</router-link>
+            </li>
+            <li class="nav-item dropdown" :class="$route.path.includes('products') ? 'active':''">
+              <router-link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produse
+              </router-link>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <router-link class="dropdown-item" to="/products/yaskawa">Yaskawa Industrial Robots</router-link>
+                <div class="dropdown-divider"></div>
+                <router-link class="dropdown-item" to="/products/partners">Parteneri si afiliati</router-link>
+              </div>
+            </li>
+          <li class="nav-item" :class="$route.name =='Contact' ? 'active':''">
+              <router-link class="nav-link" to="/contact">Contact</router-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div  class="mvh-100">
+      <router-view v-if="loading"/>
+      <div class="row align-items-center mvh-100 text-center" v-else>
+        <div class="col-12">
+          <div class="spinner-grow text-primary" style="height:4rem; width:4rem" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
-    </nav>
-    <router-view />
+    </div>
+
     <footer class="p-4">
       <div class="container">
         <div class="row">
@@ -58,11 +72,12 @@
             </ul>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-            <p>Distributor & Partener</p>
-            <img src="@/assets/yaskawa.png" width="128" >
+            <iframe loading="lazy" :src="maps" width="100%" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-            <img src="@/assets/sam_logo.jpg" width="128" >
+            <p><img src="@/assets/sam_logo.jpg" width="128" ></p>
+            <p>Distributor & Partener</p>
+            <p><img src="@/assets/yaskawa.png" width="128" ></p>
           </div>
         </div>
         <div class="row">
@@ -84,6 +99,8 @@
 export default {
   data(){
     return{
+      isMobile:window.innerWidth < 980 ? true : false,
+      loading:false,
       address:"Doctor Pavel Vasici Ungureanu 12A, 300489, Timisoara",
       contact:" +40 722 363 086",
       mail:"office@sam-robotics.ro",
@@ -102,41 +119,23 @@ export default {
   },
   components: {
   },
+  mounted(){
+    this.scroll()
+    setTimeout(()=>{
+      this.loading = true;
+    },500)
+    
+  },
   methods:{
-    postMessage(){
-      this.sending=true;
-      fetch('http://claptrap.myddns.me:7920/trello',{
-        method:'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-        name: this.name,
-        surname: this.surname,
-        company: this.company,
-        email: this.email,
-        phone:this.phone,
-        message: this.message
-      })
-      }).then((response)=> response.json()).then(()=>{
-        this.sending=false;
-        this.success = true;
-        const thisObj = this;
-        setTimeout(function(){
-          thisObj.success = false;
-        },3000);
-      }).catch((error)=>{
-        console.log(error);
-        const errorMsg = document.querySelector('.invalid-feedback');
-        errorMsg.style.display="block";
-        errorMsg.innerText = "Error! Va rugam incercati din nou.";
-        
-        setTimeout(function(){
-          errorMsg.style.display="none"
-        },3000);
-        this.sending=false;
-      })
-    }
+   scroll(){
+     window.addEventListener('scroll',()=>{
+       if(window.scrollY > 150){
+         document.querySelector('.navigation').style.backgroundColor = 'rgba(255,255,255,0.8)';
+       } else {
+         document.querySelector('.navigation').style.backgroundColor = 'transparent';
+       }
+     })
+   }
   },
 }
 </script>
@@ -152,23 +151,22 @@ html,body, #app{
     padding: 0;
   }
 }
+.navigation{
+  transition: 0.3s all linear;
+}
 nav{
   @media screen and (max-width:960px) {
     width: 100%;
-    margin:1em;
   }
   font-size: 120%;
 }
-.logo{
-  text-shadow: 1px 1px 0px #222 !important;
-}
 .nav-item >a{
-  text-shadow: 1px 1px 0px #222 !important;
+  text-shadow: 1px 1px 0px #111 !important;
 }
 .blue{
   color: #0096c7;
   &--bg{
-    background: #0096c7;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.5),#0096c7), #0096c7;
   }
 }
 .red{
@@ -183,5 +181,8 @@ footer{
 }
 .text-smer{
     font-size:70%;
+}
+.mvh-100{
+  min-height: 100vh;
 }
 </style>

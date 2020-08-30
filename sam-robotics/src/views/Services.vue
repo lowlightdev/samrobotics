@@ -7,8 +7,7 @@
     </div>
     <div class="row align-items-center container text-left m-auto no-gutters vh-50">
       <div class="col-12 animate__slideInRight animate__animated p-4">
-        <h1 class="animate__fadeIn animate__animated pb-4">Servicii</h1>
-        <p class="text-left animate__fadeIn animate__animated"> Societatea SAM Robotics,cu o experienta in domeniu de peste un deceniu, ofera o gama de servicii variata pentru roboti inustriali precum:</p>
+        <p class="text-left"> Societatea SAM Robotics,cu o experienta in domeniu de peste un deceniu, ofera o gama de servicii variata pentru roboti inustriali precum:</p>
         <ul>
           <li>
             Examinarea robotiilor in scopul determinarii necesitatiilor de mentenanta sau reparare
@@ -17,16 +16,16 @@
             Asistenta technica si/sau montarea si punerea in functiune a robotiilor industriali
           </li>
           <li>
-            Instalarea, updatarea si creerea de backupa softurilor folosite de diferite modele de roboti industriali
+            Instalarea, actualizarea si creerea de backupa softurilor folosite de diferite modele de roboti industriali
           </li>
           <li>
-            Achizitionarea si vanzarea robotiilor industriali din gama de produse oferita de partenerii nostrii
+            Achizitionarea si vanzarea robotiilor industriali
           </li>
           <li>
-            Asistenta technica si fizca in materie de roboti industriali
+            Asistenta technica in materie de roboti industriali
           </li>
         </ul>
-        <p>Pentru o mai mare performanta in a creste productia robotii industriali au o mare gama de utiliare, acestia putand fi folositi in industrii precum: industria alimentara, agricultura, automotiva, sanitara, pharmaceutica,distriburie si impachetare.</p>
+        <p>Pentru o mai mare performanta in a creste productia dumneavoastra, robotii industriali au o mare gama de utiliare acestia putand fi folositi in industrii precum: industria alimentara, agricultura, automotiva, sanitara, farmaceutica,distriburie si impachetare.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/kM2CBrVuYDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -42,17 +41,11 @@ export default {
   components: {
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.fa-arrow-left{
-  cursor: pointer !important;
-}
 header{
   min-height:30vh;
 }

@@ -13,7 +13,7 @@
         <div class="row pt-4 align-items-center justify-content-center">
           <div class="col-6 text-right">
             <h2>     
-              <font-awesome-icon icon="award" class="align-self-start justify-self-start" v-on:click="goHome"/>
+              <font-awesome-icon icon="award" class="align-self-start justify-self-start" />
               Parteneri oficiali 
             </h2>
           </div>

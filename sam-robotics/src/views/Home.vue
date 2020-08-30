@@ -3,7 +3,7 @@
     <header class="header">
       <div class="row container m-auto align-items-center h-100 no-gutters">
         <div class="col-12 text-light">
-           <h1 class="header-text-shadow p-4"> Prima alegere in consultanta, mentenanta, reparatii a robotilor industriali si a echipamentelor de automatizare industriale </h1>
+           <h2 class="header-text-shadow text-center p-4"> Prima alegere in consultanta, mentenanta, reparatii a robotilor industriali si a echipamentelor de automatizare industriale </h2>
         </div>
       </div>
     </header>
@@ -111,7 +111,6 @@ export default {
     width: 130%;
     height: 95%;
     background: linear-gradient(to top, rgba(21, 51, 65, 0.8), rgba(6, 20, 27, 0.8)), url("~@/assets/hbg.jpg") center no-repeat;
-    // background-size: 100% 100%;
     background-size: cover;
     z-index: -1;
     border-radius: 0 0 50% 50%;

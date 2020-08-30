@@ -6,11 +6,7 @@
       </header>
     </div>
     <div class="row align-items-center container text-left m-auto no-gutters vh-50">
-      <div class="col-12 animate__slideInRight animate__animated p-4">
-
-        <h2 class="h1 mt-4 pt-4">Parteneri</h2>
-        <hr />  
-       
+      <div class="col-12 animate__slideInRight animate__animated p-4">       
         <div  class="row">
           <div  class="col-xs-6 col-md-4">
             <div  id="list-tab" role="tablist" class="list-group"><a  id="list-yaskawa-list" data-toggle="list" href="#list-yaskawa" role="tab" aria-controls="yaskawa" class="list-group-item list-group-item-action" aria-selected="false">Yaskawa</a><a  id="list-attc-list" data-toggle="list" href="#list-attc" role="tab" aria-controls="attc" class="list-group-item list-group-item-action active show" aria-selected="true">ATTC - American Torch Tip</a><a  id="list-sincosald-list" data-toggle="list" href="#list-sincosald" role="tab" aria-controls="sincosald" class="list-group-item list-group-item-action">Sincosald</a><a  id="list-zakmet-list" data-toggle="list" href="#list-zakmet" role="tab" aria-controls="zakmet" class="list-group-item list-group-item-action">Zakmet</a><a  id="list-sprut-list" data-toggle="list" href="#list-sprut" role="tab" aria-controls="sprut" class="list-group-item list-group-item-action">Sprutcam</a><a  id="list-hyper-list" data-toggle="list" href="#list-hyper" role="tab" aria-controls="hyper" class="list-group-item list-group-item-action">Hyperterm</a></div></div><div  class="col-8"><div  id="nav-tabContent" class="tab-content"><div  id="list-yaskawa" role="tabpanel" aria-labelledby="list-yaskawa-list" class="tab-pane fade">

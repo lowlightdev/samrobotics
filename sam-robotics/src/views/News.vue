@@ -45,7 +45,6 @@ export default {
   components: {
   },
   beforeCreate(){
-    console.log(this.$store)
     const key = this.$store.state.blogger;
     fetch(`https://www.googleapis.com/blogger/v3/blogs/3135149309622251946/posts?key=${key}`).then(response => response.json()).then(data => {
       data.items.forEach((item)=>{
@@ -63,9 +62,6 @@ export default {
     })
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    }
   }
 }
 </script>

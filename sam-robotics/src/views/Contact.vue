@@ -101,9 +101,6 @@ export default {
   components: {
   },
   methods:{
-    goHome(){
-      this.$router.push('/')
-    },
     postMessage(){
       this.sending=true;
       fetch('http://claptrap.myddns.me:7920/trello',{
