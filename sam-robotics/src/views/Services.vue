@@ -25,7 +25,15 @@
             Asistenta technica in materie de roboti industriali
           </li>
         </ul>
-        <p>Pentru o mai mare performanta in a creste productia dumneavoastra, robotii industriali au o mare gama de utiliare acestia putand fi folositi in industrii precum: industria alimentara, agricultura, automotiva, sanitara, farmaceutica,distriburie si impachetare.</p>
+        <p>Pentru o mai mare performanta in a creste productia dumneavoastra, robotii industriali au o mare gama de utiliare acestia putand fi folositi in industrii precum:</p>
+        <ul>
+          <li> industria alimentara</li>
+          <li> agricultura</li>
+          <li>  automotiva</li>
+          <li> sanitara</li>
+          <li> farmaceutica</li>
+          <li> distributie si impachetare</li>
+        </ul>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/kM2CBrVuYDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
