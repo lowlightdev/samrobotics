@@ -11,7 +11,7 @@
             <div class="col-md-8 ">
               <div class="card-body">
                 <h5 class="card-title"><b>{{card.title}}</b></h5>
-                <p class="card-text pt-2">{{card.text}} <i class="fas fa-chevron-right"></i></p>
+                <a :href="card.link" class="card-text pt-2">{{card.text}} <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -45,22 +45,26 @@ export default {
         {
           title:'Yaskawa',
           text:'Detalii',
-          img:'https://www.yaskawa.eu.com/assets/images/logo.png'
+          img:'https://www.yaskawa.eu.com/assets/images/logo.png',
+          link:'https://www.yaskawa.eu.com/',
         },
         {
           title:'Sincosald',
           text:'Detalii',
-          img:'http://www.sincosald.it/images/logo.png'
+          img:'http://www.sincosald.it/images/logo.png',
+          link:'http://www.sincosald.it',
         },
         {
           title:'Zakmet',
           text:'Detalii',
-          img:'https://zakmet.pl/wp-content/uploads/ZAKMET_logo_light.svg'
+          img:'https://zakmet.pl/wp-content/uploads/ZAKMET_logo_light.svg',
+          link:'https://zakmet.pl'
         },
         {
           title:'Hyperterm',
           text:'Detalii',
-          img:'https://www.hypertherm.com/globalassets/common/logo_ht_shapingpossibility_185x44.png'
+          img:'https://www.hypertherm.com/globalassets/common/logo_ht_shapingpossibility_185x44.png',
+          link:'https://www.hypertherm.com',
         }
       ]
     }

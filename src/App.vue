@@ -25,6 +25,7 @@ export default {
 :root{
   --primary:#007bff;
   --secondary:rgb(209, 37, 31);
+  --dark:#222;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,6 +38,11 @@ export default {
   padding:0;
   min-height:100vh;
 }
+
+a{
+  text-decoration: none;
+}
+
 // custom style
 .btn{
   border-radius:25px;
