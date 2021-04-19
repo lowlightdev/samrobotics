@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid" id="app">
+  <main class="container" id="app">
     <header>
       <header-navigation></header-navigation>
     </header>
@@ -25,7 +25,7 @@ export default {
 :root{
   --primary:#007bff;
   --secondary:rgb(209, 37, 31);
-  --dark:#222;
+  --dark:#333;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -33,21 +33,26 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background:#f2f2f2;
-  margin:0;
+  background:var(--dark);
+  margin:auto;
   padding:0;
   min-height:100vh;
 }
-
+body,html{
+    background:var(--dark);
+}
 a{
   text-decoration: none;
 }
 
 // custom style
 .btn{
-  border-radius:25px;
+  border-radius:5px;
 }
 .btn-danger{
   background:var(--secondary);
+}
+div{
+  border-radius:5px;
 }
 </style>

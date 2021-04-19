@@ -1,20 +1,49 @@
 <template>
-    <div class="container footer py-4">
+    <div class="container footer p-4">
        <div class="footer-info">
-           <h2 class="border-end-0 border-bottom-0 border-top-0 border  border-danger border-4 ps-4"> Contact</h2>
-           <ul class="list-group">
-                <li class="list-group-item"><i class="fa-lg fas fa-map-marker-alt"></i> {{address}}</li>
-                <li class="list-group-item"><i class="fa-lg fas fa-phone"></i> {{contact}}</li>
-                <li class="list-group-item"><i class="fa-lg far fa-envelope"></i> <a :href="`mailto:${mail}`">{{mail}}</a></li>
-                <li class="list-group-item"><i class="fa-lg fab fa-facebook-f"></i> <a :href="facebook">{{facebook}}</a></li>
-            </ul>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <h4 class="pb-4">Ultimile Stiri</h4>
+                    <ul>
+                        <li class="pb-2">
+                            <div>
+                                <p>This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                <small class="text-white-50"> April 17, 2021</small>
+                            </div>
+                        </li>
+                        <li class="pb-2">
+                            <div>
+                                <p>This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                                <small class="text-white-50"> April 17, 2021</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+             
+                <div class="col-lg-4 col-sm-12">
+                    <h4 class="pb-4"> Harta</h4>
+                    <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <div class="col-lg-4 col-sm-12">
+                    <h4 class="pb-4"> Contact </h4>
+                    <ul class="">
+                        <li class="pb-4"><i class="fa-lg fas fa-map-marker-alt"></i> {{address}}</li>
+                        <li class="pb-4"><i class="fa-lg fas fa-phone"></i> {{contact}}</li>
+                        <li class="pb-4"><i class="fa-lg far fa-envelope"></i> <a :href="`mailto:${mail}`">{{mail}}</a></li>
+                        <li class="pb-4"><i class="fab fa-youtube  fa-lg"></i> <a :href="`mailto:${mail}`">{{mail}}</a></li>
+                        <li class="pb-4"><i class="fa-lg fab fa-facebook-f"></i> <a :href="facebook">{{facebook}}</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+          
        </div> 
         <div class="footer-map ">
-            <h2 class="text-start border-end-0 border-bottom-0 border-top-0 border  border-danger border-4 ps-4"> Map</h2>
-            <iframe loading="lazy" :src="maps" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+            
         </div>
     </div>
-    <div class="container-fluid text-center bg-secondary py-3 mt-4 text-white">
+    <div class="container-fluid text-center py-4 text-white mt-4 mb-4">
         <small>{{ new Date().getFullYear()}}  <i class="far fa-copyright"></i>  S.C SAM Robotics S.R.L</small>
     </div>
 </template>
@@ -35,13 +64,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-fluid{
+    background:#55595d;
+}
 .footer{
-    display:grid;
-    grid-template-columns: 1fr;
-    @media screen and (min-width:720px) {
-        grid-template-columns: 1fr  1fr;
-    }
-    gap:4rem;
+    color:white;
+    background:#55595d;
     &-info{
         text-align: left;
     }
@@ -55,12 +83,20 @@ export default {
 .list-group{
     text-align: left;
     margin-top:1rem;
+    text-decoration: none;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    
+}
 
-}
-.bg-secondary{
-    background:rgba(0,0,0,0.5);
-}
-i {
-    padding-right:1rem;
+ul {
+    & li {
+         & a {
+            text-decoration: none;
+            color:white  !important;
+         }
+        
+    }
 }
 </style>
