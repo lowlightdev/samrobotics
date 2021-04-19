@@ -1,6 +1,7 @@
 <template>
   <div class="contact container bg-light p-4 text-start">
     <h1>Cum si unde ne gasiti</h1>
+    <hr class="w-50">
     <p>
         Pentru a ne contacta puteti sa ne scrieti la adresa sediului, contactati telefonic, adresa de email sau pe pagina noastra de facebook.
         <br> 
@@ -40,7 +41,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 h1{
-    padding-top:4rem;
     padding-bottom:1rem;
     font-weight:700;
 }

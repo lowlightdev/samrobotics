@@ -4,18 +4,26 @@
     <banner-section/>
 
     <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 pb-4">
-      <div class="col">
-        <div class="card bg-light p-4" style="background-image:url('https://uicookies.com/demo/theme/metalindustry/img/welcome.jpg');">
-          <div class="card-body pt-4" >
-            <h3 class="card-title text-start pt-4"><i class="fas fa-tools"></i> Mentenanta si reparatii</h3>
+      <div class="col-md-4">
+        <div class="card p-4 bg-light">
+          <div class="card-body " >
+            <h3 class="card-title text-start"><i class="fas fa-tools"></i> Mentenanta si reparatii</h3>
             <p class="card-text text-start">Echipa noastra ofera mentenanta, reparatii, ajustari robotiilor la cea mai inalta calitate si cele mai inalte standarde oferite de o echipa pregatita pentru orice situatie.</p>
           </div>
         </div>
       </div>
-      <div class="col" >
-        <div class="card bg-light p-4"  style="background-image:url('https://uicookies.com/demo/theme/metalindustry/img/slide1.jpg');">
-          <div class="card-body pt-4">
-            <h3 class="card-title text-start pt-4"><i class="fas fa-award"></i> Calitate, siguranta, incredere</h3>
+      <div class="col-md-4">
+        <div class="card bg-light p-4" >
+          <div class="card-body">
+            <h3 class="card-title text-start "><i class="fas fa-award"></i> Calitate, siguranta, incredere</h3>
+            <p class="card-text text-start ">Cu o experienta de peste 8 ani in domeniu, calitatea serviciilor noastre este prioritatea noastra iar doavada o fac clientii multumiti si renumele acitivatatii noastre in domeniu.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-light p-4" >
+          <div class="card-body">
+            <h3 class="card-title text-start "><i class="fas fa-hands-helping"></i> Asistenta si ajutor</h3>
             <p class="card-text text-start ">Cu o experienta de peste 8 ani in domeniu, calitatea serviciilor noastre este prioritatea noastra iar doavada o fac clientii multumiti si renumele acitivatatii noastre in domeniu.</p>
           </div>
         </div>
@@ -87,10 +95,21 @@ export default {
 </script>
 <style lang="scss" scoped>
 .card{
+  height: 100%;
   background-size:cover;
-  color:white;
   transition: 0.25s all ease-in;
+  &-body{
+    transition: 0.25s all ease-in;
+    & i {
+      transition: 0.25s all ease-in;
+    }
+    &:hover i {
+      transition: 0.25s all ease-in;
+      color:var(--secondary);
+    }
+  }
 }
+
 .list-group-item{
   display: flex;
   justify-content: space-between;

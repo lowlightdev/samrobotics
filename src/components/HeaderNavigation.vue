@@ -1,9 +1,8 @@
 <template>
     <header class="bg-light">
-    <div class="row px-4 pt-4">
+    <div class="row px-4 pt-4" >
         <div class="col-sm-6 col-lg-6 text-start">
             <a class="navbar-brand" href="#"><img src="@/assets/logot.png"/></a>
-            <p class="pt-2 ps-0"><b>Solutia ta pentru automatizare industriala!</b></p>
         </div>
         <div class="col-sm-12 col-lg-6 text-end">
             <div class="grid ms-auto">
@@ -59,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .grid{
     @media screen and (min-width:940px) {
         width:50%;
@@ -81,7 +81,7 @@ export default {
 }
 .navbar-brand{
     & img {
-        max-height:56px;
+        max-height:64px;
     }
 }
 .social-media-list{

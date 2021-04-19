@@ -4,17 +4,23 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-12">
                     <h4 class="pb-4">Ultimile Stiri</h4>
-                    <ul  style="margin-left:15px;padding:0;">
+                    <ul style="margin-left:15px;padding:0;">
                         <li class="pb-2">
-                            <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                            <p class="pb-1 mb-1">
+                                <a>This is a longer card with supporting text below as a natural lead-in to additional conten.</a>
+                            </p>
                             <small class="text-white-50"> April 17, 2021</small>
                         </li>
                         <li class="pb-2">
-                            <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                            <p class="pb-1 mb-1">
+                                <a>This is a longer card with supporting text below as a natural lead-in to additional conten.</a>
+                            </p>
                             <small class="text-white-50"> April 17, 2021</small>
                         </li>
                         <li class="pb-2">
-                            <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                            <p class="pb-1 mb-1">
+                                <a>This is a longer card with supporting text below as a natural lead-in to additional conten.</a>
+                            </p>
                             <small class="text-white-50"> April 17, 2021</small>
                         </li>
                     </ul>
@@ -44,7 +50,7 @@
                     <small> S.C SAM Robotics S.R.L</small>
                 </div>
                 <div class="col-6 text-end">
-                        <small> <i class="far fa-copyright"></i> {{ new Date().getFullYear()}}  </small>
+                    <small> <i class="far fa-copyright"></i> {{ new Date().getFullYear()}}  </small>
                 </div>
             </div>
            </div>
@@ -71,6 +77,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a{
+    cursor:pointer;
+    transition: 0.25s all ease-in;
+    &:hover{
+        transition: 0.25s all ease-in;
+        color:var(--secondary) !important;
+    }
+}
 .container-fluid{
     background:#55595d;
 }
