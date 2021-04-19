@@ -7,13 +7,19 @@
                     <ul>
                         <li class="pb-2">
                             <div>
-                                <p>This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
                                 <small class="text-white-50"> April 17, 2021</small>
                             </div>
                         </li>
                         <li class="pb-2">
                             <div>
-                                <p>This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                                <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
+                                <small class="text-white-50"> April 17, 2021</small>
+                            </div>
+                        </li>
+                        <li class="pb-2">
+                            <div>
+                                <p class="pb-1 mb-1">This is a longer card with supporting text below as a natural lead-in to additional conten.</p>
                                 <small class="text-white-50"> April 17, 2021</small>
                             </div>
                         </li>
