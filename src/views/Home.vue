@@ -35,7 +35,7 @@
       <div class="row mt-4 pb-4 text-start">
         <div class="col-sm-12 col-lg-6">
           <div class=" bg-light">
-            <img src="https://images.pexels.com/photos/715347/pexels-photo-715347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="rounded" style="max-height:250px; width:100%;"/>
+            <img src="https://images.unsplash.com/photo-1567324861630-8a33e19c0416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80" style="width:100%;"/>
             <h3 class="p-4">Despre S.C SAM-ROBOTICS S.R.L</h3>
             <p  class="px-4">Am inceput activitate in anul 2008 si de peste un deceniu suntem acitiv pe piata de roboti industriali din Romania. SAM-Robotics este o companie acreditata de Yaskawa si suntem mandrii si mereu pregatit sa oferim clientiilor nostrii cele mai inalte standarde.</p>
             <div  class="p-4"><router-link to="/about" class="btn btn-primary px-4">Afla mai multe</router-link></div>
