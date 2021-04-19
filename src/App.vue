@@ -52,7 +52,5 @@ a{
 .btn-danger{
   background:var(--secondary);
 }
-div{
-  border-radius:5px;
-}
+
 </style>
