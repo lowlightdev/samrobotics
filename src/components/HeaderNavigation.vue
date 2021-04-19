@@ -80,6 +80,7 @@ export default {
     }
 }
 .navbar-brand{
+    
     & img {
         max-height:64px;
     }

@@ -7,7 +7,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="@/assets/banner.jpg" class="d-block w-100" alt="...">
+        <img src="https://images.unsplash.com/photo-1563968743333-044cef800494?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1254&q=80" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>

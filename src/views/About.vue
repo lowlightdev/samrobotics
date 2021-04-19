@@ -14,10 +14,11 @@
         <h4  class="text-end">CEO</h4>
         <hr>
         <ul class="text-end">
-          <li>
+          <li style="padding-right:0;">
             <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
           </li>
-          <li><a href="#"><i class="far fa-envelope fa-2x"></i></a></li>
+          <li style="padding-right:0;padding-left:1rem;">
+            <a href="#"><i class="far fa-envelope fa-2x"></i></a></li>
         </ul>
       </div>
     </div>
@@ -32,7 +33,7 @@
             <h5 class="card-title">Persoana 1</h5>
             <hr>
             <p class="card-text">
-              <ul class="text-end">
+              <ul class="text-start">
                 <li>
                   <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
                 </li>
@@ -49,7 +50,7 @@
             <h5 class="card-title">Persoana 1</h5>
             <hr>
             <p class="card-text">
-              <ul class="text-end">
+              <ul class="text-start">
                 <li>
                   <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
                 </li>
@@ -66,7 +67,7 @@
             <h5 class="card-title">Persoana 1</h5>
             <hr>
             <p class="card-text">
-              <ul class="text-end">
+              <ul class="text-start">
                 <li>
                   <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
                 </li>
@@ -83,7 +84,7 @@
             <h5 class="card-title">Persoana 1</h5>
             <hr>
             <p class="card-text">
-              <ul class="text-end">
+              <ul class="text-start">
                 <li>
                   <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
                 </li>
@@ -111,11 +112,13 @@ p{
 }
 
 ul{
+  margin:0;
+  padding:0;
   text-decoration: none;
   list-style-type: none;
   & li{
     display:inline-block;
-    padding-left:1rem;
+    padding-right:1rem;
   }
 }
 </style>

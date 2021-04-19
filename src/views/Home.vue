@@ -15,7 +15,7 @@
       <div class="col-md-4">
         <div class="card bg-light p-4" >
           <div class="card-body">
-            <h3 class="card-title text-start "><i class="fas fa-award"></i> Calitate, siguranta, incredere</h3>
+            <h3 class="card-title text-start"><i class="fas fa-award"></i> Calitate si incredere</h3>
             <p class="card-text text-start ">Cu o experienta de peste 8 ani in domeniu, calitatea serviciilor noastre este prioritatea noastra iar doavada o fac clientii multumiti si renumele acitivatatii noastre in domeniu.</p>
           </div>
         </div>
