@@ -1,53 +1,83 @@
 <template>
-  <main class="home">
+  <section class="custom-white ">
 
-    <section class="home-content">
-      <img src="@/assets/sam_logo.png" class="logo"/>
-      <div class="home-content__about">
-        <h1> Specialisti in industria robotilor industriali</h1>
-        <p class=""> Societatea <b>SAM Robotics</b> este reprezentantul oficial din 2008, in Romania pentru: <a href="https://www.yaskawa.eu.com/"><b>Yaskawa Robotics Division (MOTOMAN)</b></a> care este unul din liderii mondiali in conceperea, productia, implementarea si comercializarea de celule robotizate si roboti industriali cu diverse domenii de aplicabilitate in industrie, cercetare si invatamint.<br> Supunem atentiei dumneavoastra aceasta gama de servicii si produse, prin statulul nostru de distribuitor autorizat in Romania. Pe langa aceasta colectivul nostru va ofera si o intreaga gama de echipamente, unelte si accesorii necesare sectorului de confectii si constructii metalice.</p>
+    <img src="https://ifr.org/img/uploads/Yaskawa_1030_klein.jpg" style="width:100%;height:500px;"/>
+    
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-12 text-start">
+            <h1>Serviciile noastre</h1>
+            <p class="pt-4"> Oferim o gama variata de servicii in materie de roboti industriali din gama <a href="https://www.yaskawa.eu.com/"><b>Yaskawa Robotics Division (MOTOMAN)</b></a> precum mententata, instalare, support technic, backup software. Cu o echipa pefromanta cu peste 10 ani vechime.</p>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-img-top bg-1"></div>
+            <div class="card-body">
+              <h5 class="card-title">Instalare si Mentenanta</h5>
+              <p class="card-text">Oferim servicii de mentenanta, instalare si calibrare pentru roboti industriali.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-img-top bg-2"></div>
+
+            <div class="card-body">
+              <h5 class="card-title">Asistenta si suport technic</h5>
+              <p class="card-text">Asistenta technica pentru roboti industrali din gama de produse acoperita.</p>
+            </div>
+          </div>
+        </div>
+       
       </div>
+    </div>
 
-      <ul class="home-contact">
-        <li>
-          <i class="fab fa-facebook fa-lg"></i>
-          <span><a :href="facebook">{{facebook}}</a></span>
-        </li>
-        <li>
-          <i class="far fa-envelope fa-lg"></i>
-          <span><a :href="`mailto:${email}`">{{email}}</a></span>
-        </li>
-        <li>
-          <i class="fas fa-phone-alt fa-lg"></i>
-          <span>{{phone}}</span>
-        </li>
-        <li>
-          <i class="fas fa-map-marker-alt fa-lg"></i>
-          <span><a :href="maps">{{address}}</a></span>
-        </li>
-      </ul>
-      <small class="copyright">copyright <i class="far fa-copyright fa-sm"></i> <a href="https://sam-robotics.ro">SAM Robotics</a></small>
+    <section class="scroll-background my-4 py-4">
+      <div class="container">
+        <div class="row">
+        <div class="col-xs-12 col-md-6">
+              <i class="fas fa-tasks fa-3x"></i> 
+              <h1 class="text-blue"> +{{projects}} </h1>
+              <p> de proiecte!</p>
+            </div>
+        <div class="col-xs-12 col-md-6">
+            <i class="fas fa-users fa-3x"></i> 
+            <h1 class="text-blue"> +{{clients}} </h1>
+            <p > clienti multumiti!</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <aside class="home-aside">
-      <img src="https://ifr.org/img/uploads/Yaskawa_1030_klein.jpg" class="home-aside-img"/>
-      
-      <div class="additional-content"> 
-        <p style="border-right: 5px solid;">
-          <i class="fas fa-tasks fa-3x"></i> 
-          <span class="clients-nr"> +{{projects}} </span><br> 
-          <span style="font-size:2em"> proiecte!</span>
-        </p>
-        <p>
-          <i class="fas fa-users fa-3x"></i> 
-          <span class="clients-nr"> +{{clients}} </span><br> 
-          <span style="font-size:2em"> clienti multumiti!</span>
-        </p>
+  <div class="container">
+      <div class="row pb-4">
+        <div class="col-12 text-start">
+            <h1 class="pb-4">Produse</h1>
+            <p>Gama de produse Yaskawa Motoman ofera cea mai înaltă calitate de pe piata, avand peste 100 de ani de performanta si progress technic.</p>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-img-top bg-robots"></div>
+            <div class="card-body">
+              <h5 class="card-title">MOTOMAN Robots</h5>
+              <p class="card-text">Cea mai înaltă calitate oferind performanțe remarcabile</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-img-top bg-ac"></div>
+
+            <div class="card-body">
+              <h5 class="card-title">AC Drives</h5>
+              <p class="card-text">Drivere industriale de cea mai înaltă calitate,cu performanțe remarcabile</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-    </aside>
-
-  </main>
+  </section>
 </template>
 
 <script>
@@ -59,12 +89,8 @@ export default {
   },
   data(){
     return {
-      address:"Doctor Pavel Vasici Ungureanu 12A, 300489, Timisoara",
-      phone:" +40 722 363 086",
-      email:"office@sam-robotics.ro",
-      facebook:"https://facebook.com/SamRoboticsRomania",
-      maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.70971906125!2d21.2098532159288!3d45.736915979105156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d0aebaaee37%3A0xf65c7e24b66e4115!2sStr.%20Dr.%20Pavel%20Vasici%20Ungureanu%2012a%2C%20Timi%C8%99oara%20300489%2C%20Romania!5e0!3m2!1sen!2suk!4v1594726703629!5m2!1sen!2suk",
       clientsNr:1000,
+      projectsNr:100,
       clients:0,
       projects:0
     }
@@ -75,7 +101,7 @@ export default {
           this.clients++;
       },250)
     }
-    for(let i =0;i<this.clientsNr;i++){
+    for(let i =0;i<this.projectsNr;i++){
         setTimeout(()=>{
           this.projects++;
       },250)
@@ -85,105 +111,56 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.home{
-  display:grid;
+.img-fluid{
   width:100%;
-  height:100vh;
-  grid-template-areas:"aside"
-  "content";
-  text-align:left;
-  @media screen and (min-width:960px) {
-    grid-template:"content aside" / 1fr 1fr;
-    place-items:center;
-  }
-  a{
-    color:var(--blue-dark);
-    text-decoration: none;
-  }
-  & h1, h2 {
-    color:var(--blue);
-  }
-  & h1 {
-    font-size:2.5em;
-  }
-  & h2{
-    font-size:2em;
-  }
-  &-content{
-    padding-left:50px;
-    padding-right:50px;
-    grid-area:content;
-    display:grid;
-    grid-template-columns: 1fr;
-    justify-content: space-between;
-    height:85%;
-    & p {
-      text-align: justify;
-    }
-  }
-  &-aside{
-    grid-area:aside; 
-    width:100%;
-    place-items: flex-end;
-    display: grid;
-    @media screen and (min-width:960px) {
-      height:90%;
-    }
-    &-img{
-      width: 100%;
-      border-bottom-left-radius: 15px;
-      @media screen and (min-width:960px) {
-        border-top-left-radius: 15px;
-        width: 90%;
-        height:90%;
-      }
-    }
-    & div {
-      text-align: center;
-      place-self: center;
-      font-weight: bold;
-    }
-  }
-  
-  &-contact{
-    margin:0;
-    padding:0;
-    list-style-type: none;
-    width:100%;
-    align-self:end;
-    & li {
-      margin-top:1em;
-      display:grid;
-      grid-template-columns: auto 1fr;
-      gap:10px;
-      place-items: center;
-      & > i {
-        min-width:20px;
-        color:var(--red);
-      }
-      & span{
-        place-self:flex-start;
-      }
-    }
-  }
+  max-height:100%;
 }
-.clients-nr{
-  font-size:3em;
-  color:var(--red);
+.custom-white{
+  background-color:var(--white);
 }
-.logo{
-  max-width:128px;
+.scroll-background{
+  background: linear-gradient(
+          rgba(0, 0, 0, 0.6), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url('~@/assets/clients_satisfy.jpg');
+  background-size:100%;
+  color:white;
+  background-position: center;
 }
-.copyright{
-  padding-top:15px;
-  padding-bottom:15px;
-  align-self:end;
+.card-img-top{
+  height:250px;
+  width:100%;
 }
-.additional-content{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:30px;
-  text-align: center;
+
+.bg-motion{
+  background-image:url('~@/assets/motion_control.webp');
+  background-size:cover;
+  background-position:center;
+}
+
+.bg-robots{
+  background-image:url('~@/assets/bg1.webp');
+  background-size:cover;
+  background-position:center;
+}
+.bg-ac{
+  background-image:url('~@/assets/ac_drives.webp');
+  background-size:cover;
+  background-position:center;
+}
+.bg-1{
+background-image:url('~@/assets/bg1.webp');
+
+}
+.bg-2{
+background-image:url('~@/assets/bg2.webp');
+background-size:cover;
+background-position:bottom;
+}
+.bg-3{
+background-image:url('~@/assets/bg3.webp');
+background-size:cover;
+background-position:center;
 }
 </style>
