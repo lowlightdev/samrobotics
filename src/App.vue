@@ -1,10 +1,10 @@
 <template>
-  <main class="container-fluid p-0 m-0">
+  <main class="container-fluid ">
     <div class="row hv-100">
-      <div class="col-4 align-self-center">
+      <div class="col-md-4 col-sm-12 align-self-center">
         <img src="@/assets/sam_logo.png" class="logo"/>
       </div>
-      <div class="col-8 align-self-center text-start border border-danger border-right-0 border-top-0 border-bottom-0">
+      <div class="col-md-8 col-sm-12 align-self-center text-start border border-danger border-right-0 border-top-0 border-bottom-0">
         <h1>Our new website is coming soon!</h1>
   
         <ul class="social-media">
