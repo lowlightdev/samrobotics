@@ -1,50 +1,30 @@
 <template>
-  <main class="grid-container container-fluid p-0">
-    <nav class="navbar navbar-expand-lg navbar-light position-sticky">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="@/assets/sam_logo.png" class="logo"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <router-link class="nav-link" :class="{'active': $route.name == 'Home' }" aria-current="page" to="/">Acasa</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/about"  :class="{'active':$route.name == 'About'}">Despre noi</router-link>
-            </li>
-          </ul>
-        </div>
+  <main class="container-fluid p-0 m-0">
+    <div class="row hv-100">
+      <div class="col-4 align-self-center">
+        <img src="@/assets/sam_logo.png" class="logo"/>
       </div>
-    </nav>
-
-    <router-view/>
-
-    <footer class="footer py-1">
-      <div class="container">
-        <small class="copyright">copyright <i class="far fa-copyright fa-sm"></i> <a href="https://sam-robotics.ro">SAM Robotics</a></small>
+      <div class="col-8 align-self-center text-start border border-danger border-right-0 border-top-0 border-bottom-0">
+        <h1>Our new website is coming soon!</h1>
+  
         <ul class="social-media">
           <li>
             <i class="fas fa-phone pe-2"></i> {{phone}}
           </li>
           <li>
             <a :href="`mailto:${email}`"><i class="far fa-envelope"></i>
-            <span></span></a>
+          </a>   {{email}}
           </li>
           <li>
             <a :href="facebook"><i class="fab fa-facebook"></i>
-            <span></span></a>
-          </li>
-          <li>
-            <router-link to="/about"><i class="fas fa-map-marker-alt "></i>
-            </router-link>
+            <span></span> {{facebook}}</a>
           </li>
         </ul>
+        <small class="copyright">copyright <i class="far fa-copyright fa-sm"></i> <a href="https://sam-robotics.ro">SAM Robotics</a></small>
       </div>
-    </footer>
+    </div>
+    <!-- <router-view/> -->
+
   </main>
 </template>
 <script>
@@ -71,7 +51,8 @@ html,body{
   padding:0;
   margin:0;
   width:100%;
-  min-height:100vh;
+  max-height:100vh;
+  overflow: hidden;
 }
 
 #app {
@@ -95,9 +76,11 @@ main{
   z-index:9999;
 }
 .logo{
-  max-width:96px;
+  max-width:256px;
 }
-
+.hv-100{
+  height:100vh;
+}
 .nav-link{
   &.active{
     background:var(--red);
@@ -119,25 +102,16 @@ main{
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
-.footer{
-  color:white;
-  text-align:left;
-  & .container{
-    display:grid;
-    grid-template-columns: 1fr auto;
-  }
-  background:#222;
-}
 
 .social-media{
-  & a{
-    color:var(--white) !important;
-  }
-  margin:auto;
   list-style-type: none;
-  display:grid;
-  gap:30px;
-  grid-template-columns: auto auto auto auto;
+  align-self: start;
+  text-align: left;
+  margin:0;
+  padding:0;
+  & li{
+    padding: 10px 0px;
+  }
 }
 
 
